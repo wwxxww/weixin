@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/index",
+    "pages/order/index",
+    "pages/me/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "饿了么",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index.png",
+      "text": "外卖"
+    }, {
+      "pagePath": "pages/find/index",
+      "iconPath": "images/find.png",
+      "selectedIconPath": "images/find.png",
+      "text": "发现"
+    }, {
+      "pagePath": "pages/order/index",
+      "iconPath": "images/order.png",
+      "selectedIconPath": "images/order.png",
+      "text": "订单"
+    }, {
+      "pagePath": "pages/me/index",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me.png",
+      "text": "我"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

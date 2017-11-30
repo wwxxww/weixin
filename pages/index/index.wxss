@@ -1,0 +1,270 @@
+/**index.wxss**/
+
+/* 头部  */
+
+.header {
+  height: 200rpx;
+  background-color: #0096ff;
+  color: white;
+  font-size: 26rpx;
+  padding: 10rpx;
+}
+
+/* 天气  */
+
+.address-weather {
+  display: flex;
+}
+
+.flex-item-left {
+  width: 77%;
+}
+
+.flex-item-left text:nth-child(1) {
+  font-size: 60rpx;
+}
+
+.flex-item-left text:nth-child(2) {
+  margin-left: 10rpx;
+  align-items: center;
+}
+
+.flex-item-right {
+  width: 23%;
+  display: flex;
+  height: 70rpx;
+}
+
+.flex-item-right image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 搜索框  */
+
+.header .search {
+  margin-top: 20rpx;
+}
+
+.header .search .input {
+  background-color: white;
+  text-align: center;
+  height: 70rpx;
+  border-radius: 30rpx;
+}
+
+/* 关键字  */
+
+.keys {
+  margin-top: 10rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  height: 60rpx;
+}
+
+.key-item {
+  display: inline-block;
+  padding-right: 20rpx;
+}
+
+/* 导航  */
+
+.swiper {
+  margin-top: 10rpx;
+}
+
+.swiper .line {
+  height: 42%;
+  display: flex;
+}
+
+.swiper .line .swiper-item {
+  width: 25%;
+  text-align: center;
+}
+
+.swiper .line .swiper-item image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.swiper .line .swiper-item text {
+  display: block;
+  width: 100%;
+  font-size: 22rpx;
+  height: 35rpx;
+}
+
+/* 商家列表  */
+
+.rbox {
+  padding: 20rpx;
+  padding-top: 0rpx;
+}
+
+.restaurant-item {
+  position: relative;
+  background-color: white;
+  border-bottom: solid 1rpx #f3f3f3;
+  margin-bottom: 10rpx;
+  display: flex;
+  width: 100%;
+}
+
+.new-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 70rpx;
+  width: 70rpx;
+  background: linear-gradient(135deg, #26ce61, #26ce61 50%, transparent 0);
+}
+
+.new-mark text {
+  color: white;
+  font-weight: bold;
+  display: block;
+  transform: rotate(-45deg);
+  font-size: 16rpx;
+}
+
+.res-ico {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.right-box {
+  width: calc(100% - 150rpx - 8rpx);
+  margin-left: 8rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-top {
+  flex-basis: 35%;
+  display: flex;
+  height: 10rpx;
+}
+
+.c-top text {
+  flex-basis: 70%;
+  margin: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pre-name:before {
+  content: "品牌";
+  font-weight: bold;
+  font-size: 18rpx;
+  background-color: #ffd930;
+  padding: 2rpx;
+  border-radius: 2rpx;
+  margin: 0 4rpx;
+}
+
+.c-top .flagbox, .c-top .flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-top .flagbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c-top .flag {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 4rpx;
+  color: grey;
+  border: solid 1rpx lightgrey;
+  font-size: 20rpx;
+}
+
+.c-mid {
+  flex-basis: 35%;
+  display: flex;
+  font-size: 26rpx;
+}
+
+.c-mid .mid-left, .c-mid mid-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid-left text {
+  color: #ff6000;
+  margin: 0 4rpx;
+}
+
+.mid-left view {
+  color: grey;
+}
+
+.mid-right {
+  display: flex;
+  font-size: 20rpx;
+  position: absolute;
+  right: 0;
+}
+
+.zsd {
+  color: #2395ff;
+  border: solid 1px #2395ff;
+  border-radius: 2px;
+  padding: 1px;
+}
+
+.fnzs {
+  margin-left: 4px;
+  color: white;
+  background-color: #2395ff;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+.c-bot {
+  flex-basis: 35%;
+  display: flex;
+  font-size: 26rpx;
+}
+
+.bot-left {
+  display: flex;
+  color: grey;
+}
+
+.bot-left text {
+  margin-left: 4px;
+}
+
+.pre-x:before {
+  content: "/ ";
+  color: grey;
+}
+
+.bot-right {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.bot-right view {
+  color: grey;
+}
+
+.bot-right text {
+  color: #2395ff;
+}

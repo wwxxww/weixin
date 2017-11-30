@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<view class="page">
+  <!--头部begin-->
+  <view class="header">
+    <!--地址和天气begin-->
+    <view class="address-weather">
+      <view class="flex-item-left">
+        <text class="fa fa-map-marker"></text>
+        <text>{{position.name}}</text>
+      </view>
+      <view class="flex-item-right">
+        <view>
+          <text>{{weather.temperature}}\n{{weather.description}}</text>
+        </view>
+        <view>
+          <image src="{{weather.image_hash}}"></image>
+        </view>
+      </view>
+    </view>
+    <!--地址和天气end-->
+
+    <!--搜索begin-->
+    <view class="search">
+      <input class="input" maxlength="20" placeholder="搜索商家、商品" />
+    </view>
+    <!--搜索end-->
+
+    <!--热门关键字begin-->
+    <view class="keys">
+      <scroll-view class="scroll-view_H" scroll-x="true" scroll-y="false" style="width: 100%">
+        <view class="scroll-view-item_H" wx:for="{{keys}}" wx:for-index="idx" wx:for-item="item">
+          <navigator class="key-item" url="{{item.url}}">{{item.search_word}}</navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <!--热门关键字end-->
+  </view>
+  <!--头部end-->
+  <!-- 导航begin  -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item wx:for="{{carousel}}" wx:for-index="idx1" wx:for-item="item1">
+        <view class="line" wx:for="{{item1}}" wx:for-index="idx2" wx:for-item="item2">
+          <view class="swiper-item" wx:for="{{item2}}" wx:for-index="idx3" wx:for-item="item3">
+            <image src="{{item3.image}}"></image>
+            <text>{{item3.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航end  -->
+  <!-- 商家列表begin  -->
+  <view class="rbox">
+    <view class="restaurant-item" wx:for="{{restaurants}}" wx:for-index="idx" wx:for-item="restaurant">
+      <view wx:if="restaurant.is_new" class="new-mark">
+        <text>新店</text>
+      </view>
+      <image class="res-ico" src="{{restaurant.image_path}}"></image>
+
+      <view class="right-box">
+        <view class="c-top">
+          <text class="{{restaurant.is_premium?'pre-name':''}}">{{restaurant.name}}</text>
+          <view class="flagbox">
+            <view class="flag" wx:for="{{restaurant.supports}}" wx:for-index="idx1" wx:for-item="item">{{item.icon_name}}</view>
+          </view>
+        </view>
+        <view class="c-mid">
+          <view class="mid-left">
+            <text>{{restaurant.rating}}</text>
+            <view>月售{{restaurant.recent_order_num}}单</view>
+          </view>
+          <view class="mid-right">
+            <view class="zsd" wx:if="{{restaurant.delivery_mode}}">准时达</view>
+            <view class="fnzs" wx:if="{{restaurant.delivery_mode}}">蜂鸟转送</view>
+          </view>
+        </view>
+        <view class="c-bot">
+          <view class="bot-left">
+            <view>￥{{restaurant.float_minimum_order_amount}}元起送</view>
+            <text class="pre-x">{{restaurant.piecewise_agent_fee.tips}}</text>
+          </view>
+          <view class="bot-right">
+            <view>{{restaurant.distance}}</view>
+            <text class="pre-x">{{restaurant.order_lead_time}}分钟</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 商家列表end  -->
+</view>
